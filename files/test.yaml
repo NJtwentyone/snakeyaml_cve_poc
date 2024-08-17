@@ -1,0 +1,13 @@
+!!com.example.snakeyaml.Student
+age: 21
+courses:
+- credits:!!com.example.snakeyaml.Student
+age: 21
+courses:
+- credits: 5.0
+  name: Intelligence
+- credits: 2.0
+  name: Crafting
+department: Cyberware
+firstName: Tim
+lastName: Doe
