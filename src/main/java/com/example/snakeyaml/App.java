@@ -59,7 +59,15 @@ public class App {
             String body = req.body();
 
             InputStream inputStream = new ByteArrayInputStream(body.getBytes());
-            Yaml yaml = new Yaml(new Constructor(Student.class));
+            Yaml yaml = new Yaml(new Constructor(Student.class)); // for v1.33
+            //Yaml yaml = new Yaml(new Constructor(Student.class, new org.yaml.snakeyaml.LoaderOptions())); // for v2.0+ this will throw error, safe constrcutor is called by default now
+           
+            /** for v2.0+ more complete to example to allow Student yaml#Load
+            * org.yaml.snakeyaml.LoaderOptions loaderoptions = new org.yaml.snakeyaml.LoaderOptions();
+            * org.yaml.snakeyaml.inspector.TagInspector taginspector = tag -> tag.getClassName().equals(Student.class.getName());
+            * loaderoptions.setTagInspector(taginspector);
+            * Yaml yaml = new Yaml(new Constructor(Student.class, loaderoptions )); // for v2.0+
+            */
             Student data = yaml.load(inputStream);
             System.out.println(data);
 
