@@ -14,6 +14,8 @@ Run the container with `docker run --rm -p8080:8080 snakeyaml`
 
 or the jar if you built on your host with `java -jar target/snakeyaml-1.0-SNAPSHOT-jar-with-dependencies.jar`
 
+or when using jars in lib folder `java -cp "target/snakeyaml-1.0-SNAPSHOT-jar-with-dependencies.jar:/libs/*" com.example.snakeyaml.App`
+
 ## use
 
 Send a get request to serialize object of student class and send yaml as response

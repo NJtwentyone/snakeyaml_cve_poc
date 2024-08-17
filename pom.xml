@@ -54,11 +54,31 @@
       <artifactId>slf4j-simple</artifactId>
       <version>1.7.32</version>
     </dependency>
+<!-- OPEN SOURCE with Vulnerable CVE-2022-1471 v1.33 and below v2.0+ does not have it --> 
     <dependency>
       <groupId>org.yaml</groupId>
       <artifactId>snakeyaml</artifactId>
       <version>1.33</version>
     </dependency>
+
+<!-- PENTAHO JAR CHANGES with CVE-2022-1471, manually copy ove3r jars to libs folder
+    <dependency>
+      <groupId>com.com.konloch</groupId>
+      <artifactId>safeyaml</artifactId>
+      <version>1.34.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/libs/safeyaml-1.34.1.jar</systemPath>
+    </dependency>
+-->
+<!-- PENTAHO JAR CHANGES with CVE-2022-1471, manually copy over jars to libs folder
+    <dependency>
+      <groupId>org.hitachivantara</groupId>
+      <artifactId>safeyaml</artifactId>
+      <version>1.34.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/libs/safeyaml-1.34.1.jar</systemPath>
+    </dependency>
+-->
     <dependency>
       <groupId>com.sparkjava</groupId>
       <artifactId>spark-core</artifactId>
