@@ -5,6 +5,7 @@ public class Student extends Person {
     private long id;
     private String department;
     private List<Course> courses;
+    public Object objectField;
     // Getters and setters
     public void setId(int newId) {
         this.id = newId;
@@ -17,6 +18,10 @@ public class Student extends Person {
     public void setCourses(List<Course> newCourses) {
         this.courses = newCourses;
     }
+    
+    public void setObjectField(Object obj){
+    	this.objectField = obj;
+    }
 
     public long getId() {
         return id;
@@ -28,5 +33,9 @@ public class Student extends Person {
 
     public List<Course> getCourses() {
         return courses;
+    }
+
+    public Object getObjectField(){
+	return objectField;
     }
 }
